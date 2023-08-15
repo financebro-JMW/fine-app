@@ -2,11 +2,15 @@
   "name": "fine-app",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "test": "vitest",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -20,19 +24,26 @@
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
+    "@testing-library/react": "^14.0.0",
     "@types/node": "20.4.9",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
+    "@vitejs/plugin-react": "^4.0.4",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.13",
     "husky": "^8.0.0",
+    "jsdom": "^22.1.0",
     "prettier-plugin-tailwindcss": "^0.5.2",
-    "typescript": "5.1.6"
+    "typescript": "5.1.6",
+    "vitest": "^0.34.1"
   },
   "husky": {
     "hooks": {
       "pre-commit": "npx lint-fix",
       "pre-push": "npx test"
     }
+  },
+  "directories": {
+    "tests": "__tests__"
   }
 }
