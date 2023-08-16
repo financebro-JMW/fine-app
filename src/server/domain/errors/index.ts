@@ -1,1 +1,3 @@
-export * from './email'
+/* eslint-disable prettier/prettier */
+export * from './email';
+
